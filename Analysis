@@ -1,0 +1,58 @@
+{
+  "name": "Analysis",
+  "type": "object",
+  "properties": {
+    "original_text": {
+      "type": "string",
+      "description": "The original conversation text pasted by the user"
+    },
+    "vibe": {
+      "type": "string",
+      "description": "Short vibe label like chill, tense, flirty, awkward"
+    },
+    "confidence": {
+      "type": "number",
+      "description": "Confidence percentage 0-100"
+    },
+    "summary": {
+      "type": "string",
+      "description": "A short human summary of what is going on"
+    },
+    "hidden_meanings": {
+      "type": "array",
+      "description": "Array of hidden meaning objects",
+      "items": {
+        "type": "object",
+        "properties": {
+          "phrase": {
+            "type": "string"
+          },
+          "meaning": {
+            "type": "string"
+          },
+          "confidence": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "emotional_tone": {
+      "type": "string",
+      "description": "The overall emotional tone"
+    },
+    "things_left_unsaid": {
+      "type": "array",
+      "description": "Things the person probably wanted to say but didnt",
+      "items": {
+        "type": "string"
+      }
+    },
+    "advice": {
+      "type": "string",
+      "description": "Quick advice on how to respond"
+    }
+  },
+  "required": [
+    "original_text"
+  ]
+}
